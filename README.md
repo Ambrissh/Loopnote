@@ -4,123 +4,193 @@
 
 # LoopNote
 
-**A parallel thinking space for ChatGPT.**
+### A parallel thinking space for ChatGPT.
 
-LoopNote was built for a simple frustration that every heavy ChatGPT user eventually experiences.
+LoopNote is a lightweight AI notebook that lives directly inside ChatGPT.
 
-You're deep inside a long conversation-reading a technical explanation, studying a difficult concept, debugging code, researching a topic, or working through a complex problem. Halfway through, a small doubt appears.
+If you've ever been deep inside a long ChatGPT conversation and suddenly needed to ask a small side question, look up a definition, save an insight, or jot down a thought, you've probably experienced the same frustration that inspired LoopNote.
 
-Maybe it's a definition.
-
-Maybe it's a quick clarification.
-
-Maybe it's a side question that's important, but not important enough to derail the main conversation.
-
-At that point, you usually have two options:
+You can either:
 
 * Ask the question in the current chat and clutter the conversation.
 * Open a new chat and lose the context of what you were reading.
+* Scroll away from your current position and later struggle to find your place again.
 
-Even worse, ChatGPT often takes you straight to the bottom of the conversation. When you come back, you're forced to scroll again, find your place again, and mentally reconstruct where you left off. It seems like a small interruption, but when it happens repeatedly during study sessions, research, or deep work, it breaks momentum.
+When this happens repeatedly during study sessions, research, coding, or deep work, it breaks momentum.
 
-LoopNote solves that problem.
-
-It provides a lightweight notebook and AI assistant directly inside ChatGPT, giving you a dedicated space for side questions, quick clarifications, notes, and saved insights without interrupting your primary workflow.
-
----
-
-## Why LoopNote?
-
-When you're learning, researching, or building something, not every thought belongs in the main conversation.
-
-Sometimes you just want to ask:
-
-> "What does this term mean?"
-
-> "Can you explain this equation?"
-
-> "Give me a simpler explanation."
-
-> "Let me save this idea before I forget it."
-
-LoopNote lets you do exactly that while staying in the same place.
-
-No switching chats.
-
-No opening extra tabs.
-
-No losing your position in a long conversation.
-
-No polluting the main thread with temporary questions.
+LoopNote solves this by providing a dedicated workspace alongside ChatGPT for quick questions, personal notes, and saved insights—without interrupting your primary workflow.
 
 ---
 
 ## Features
 
-### Fast AI Assistant
+### ⚡ Fast AI Assistant
 
-Powered by Groq for near-instant answers to side questions and quick clarifications.
+Powered by Groq's ultra-fast inference for instant clarifications, definitions, summaries, and follow-up questions.
 
-### Save Insights
+### 📝 Save Insights
 
-Turn useful AI responses into permanent notes with a single click.
+Save useful AI responses directly into your notebook with a single click.
 
-### Personal Notes
+### 📒 Personal Notes
 
-Capture your own ideas, observations, and reminders while you work.
+Create and manage your own notes without leaving ChatGPT.
 
-### Question History
+### 🕘 Question History
 
-Revisit previous questions and conversations at any time.
+Browse and reopen previous conversations whenever you need them.
 
-### Markdown Export
+### 📥 Markdown Export
 
-Download conversations for Obsidian, Notion, GitHub, or personal archives.
+Export conversations as Markdown files for Obsidian, Notion, GitHub, or personal archives.
 
-### Notebook-Inspired UI
+### 🎨 Notebook-Inspired Design
 
 A warm graph-paper aesthetic designed to feel like a digital study notebook.
 
+### 🔒 Privacy First
+
+Runs entirely in your browser with no backend servers and no tracking.
+
 ---
 
-## How It Works
+## Installation
+
+### Option 1: Download ZIP
+
+1. Download this repository as a ZIP.
+2. Extract it to a folder on your computer.
+
+### Option 2: Clone Repository
+
+```bash
+git clone https://github.com/yourusername/loopnote.git
+```
+
+---
+
+## Load Into Chrome
+
+1. Open Chrome.
+2. Navigate to:
+
+```text
+chrome://extensions
+```
+
+3. Enable **Developer Mode**.
+4. Click **Load unpacked**.
+5. Select the `loopnote` folder.
+
+The extension will now be installed locally.
+
+---
+
+## Setup
+
+The first time you open LoopNote, you'll be asked for a Groq API key.
+
+### Get a Free Groq API Key
+
+1. Create an account at:
+
+```text
+https://console.groq.com
+```
+
+2. Generate an API key.
+3. Paste it into LoopNote.
+4. Click **Save Key**.
+
+Your key is stored locally using Chrome Storage and is never hardcoded into the extension.
+
+---
+
+## How To Use
 
 1. Open ChatGPT.
-2. Open LoopNote from the sidebar.
-3. Ask side questions without affecting the main conversation.
-4. Save useful responses and personal notes.
-5. Continue exactly where you left off.
+2. Open the LoopNote sidebar.
+3. Ask quick side questions without affecting your main conversation.
+4. Save useful responses as insights.
+5. Create personal notes.
+6. Revisit previous questions from History.
+7. Export conversations whenever needed.
 
-Everything stays inside the same page.
+Everything happens inside the same ChatGPT page.
 
 ---
 
-## Privacy
+## Example Workflow
 
-LoopNote runs entirely in your browser.
+Imagine you're reading a long explanation about neural networks.
 
-* No backend servers
-* No ChatGPT cookie access
-* No WebSocket interception
-* No tracking
-* No data collection
+Halfway through, you wonder:
 
-The only external request is sent directly to Groq when you ask a question.
+> "What exactly is backpropagation?"
+
+Instead of disrupting the main conversation:
+
+1. Open LoopNote.
+2. Ask the question.
+3. Get a quick answer.
+4. Save the explanation.
+5. Continue reading exactly where you left off.
+
+No chat switching.
+
+No extra tabs.
+
+No lost scroll position.
+
+---
+
+## Privacy & Security
+
+LoopNote is designed to be simple and transparent.
+
+### What LoopNote Does Not Do
+
+* Access ChatGPT cookies
+* Intercept ChatGPT requests
+* Read WebSocket traffic
+* Modify ChatGPT conversations
+* Send your notes to external servers
+* Collect analytics or tracking data
+
+### What LoopNote Does Do
+
+* Store notes locally using Chrome Storage
+* Send your questions directly to Groq using your own API key
+
+That's it.
 
 ---
 
 ## Bring Your Own API Key
 
-LoopNote uses your own Groq API key.
+LoopNote follows a BYOK (Bring Your Own Key) model.
 
-This means:
+Benefits:
 
-* No shared rate limits
 * No subscriptions
+* No shared rate limits
 * No server costs
-* Full control over your usage
+* Full control over usage
+* No dependency on a third-party backend
 
-Your key is stored locally and never hardcoded into the extension.
+Your API key remains stored locally in your browser.
+
+---
+
+## Tech Stack
+
+* Chrome Extensions Manifest V3
+* Vanilla JavaScript
+* Chrome Storage API
+* Groq API
+* llama-3.1-8b-instant
+* Zero dependencies
+* Zero build tools
 
 ---
 
@@ -129,7 +199,8 @@ Your key is stored locally and never hardcoded into the extension.
 * Students studying complex subjects
 * Researchers navigating long conversations
 * Developers working through technical problems
-* Anyone who spends hours inside ChatGPT and wants a better way to think alongside it
+* Writers and knowledge workers
+* Anyone who spends hours inside ChatGPT
 
 ---
 
@@ -139,4 +210,8 @@ ChatGPT helps you explore ideas.
 
 LoopNote helps you stay in flow while doing it.
 
-Because sometimes the biggest productivity killer isn't a hard problem, it's losing your place while trying to solve a small one.
+Because sometimes the biggest productivity killer isn't a difficult problem—it's losing your place while trying to solve a small one.
+
+---
+
+Built for learners, researchers, developers, and curious minds.
